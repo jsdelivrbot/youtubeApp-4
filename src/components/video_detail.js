@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 const VideoDetail = ({ video }) => {
   if (!video) {
@@ -13,10 +15,10 @@ const VideoDetail = ({ video }) => {
       <div className="embed-responsive embed-responsive-16by9">
         <iframe className="embed-responsive-item" src={url} />
       </div>
-      <div className="details">
-        <div>{video.snippet.title}</div>
-        <div>{video.snippet.description}</div>
-      </div>
+      <Paper className="details">
+        <Typography>{video.snippet.title}</Typography>
+        <Typography>{video.snippet.description}</Typography>
+      </Paper>
     </div>
   );
 };
